@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 340px;
+      padding: 16px;
+      font-family: Arial, sans-serif;
+      background: #fefefe;
+    }
+    h2 {
+      text-align: center;
+      margin: 0 0 12px;
+      color: #333;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin: 8px 0 4px;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 8px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    #result {
+      margin-top: 12px;
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+      color: #2a7f2a;
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 8px;
+      min-height: 40px;
+      word-break: break-word;
+    }
+    .error {
+      color: #d00;
+      font-size: 14px;
+    }
+    #saveBtn {
+      display: block;
+      margin: 6px auto;
+      width: auto;
+      padding: 4px 10px;
+      font-size: 12px;
+      background: #e0e0e0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #saveBtn:disabled {
+      background: #f5f5f5;
+      color: #aaa;
+      border-color: #ddd;
+    }
+    #historyBox {
+      margin-top: 14px;
+      border-top: 1px solid #ddd;
+      padding-top: 8px;
+    }
+    #historyBox h4 {
+      margin: 0 0 6px;
+      font-size: 13px;
+      color: #555;
+    }
+    #historyList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 13px;
+    }
+    #historyList li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 0;
+      border-bottom: 1px dotted #eee;
+    }
+    #historyList li:last-child {
+      border-bottom: none;
+    }
+    .history-item {
+      flex: 1;
+    }
+    .delete-btn {
+      background: none;
+      border: none;
+      color: #c00;
+      font-size: 14px;
+      cursor: pointer;
+      padding: 0 4px;
+      margin-left: 6px;
+      width: auto;
+    }
+    .delete-btn:hover {
+      color: #900;
+    }
+  </style>
+</head>
+<body>
+  <h2>Conversor de Moedas</h2>
+
+  <label for="amount">Valor:</label>
+  <input type="text" id="amount" placeholder="Ex: 100,00" autofocus>
+
+  <label for="fromCurrency">De:</label>
+  <select id="fromCurrency"></select>
+
+  <label for="toCurrency">Para:</label>
+  <select id="toCurrency"></select>
+
+  <div id="result"></div>
+  <button id="saveBtn" disabled title="Salvar esta cotação no histórico">💾 Salvar cotação</button>
+
+  <div id="historyBox">
+    <h4>Últimas conversões salvas</h4>
+    <ul id="historyList"></ul>
+  </div>
+
+  <script src="currencies.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
