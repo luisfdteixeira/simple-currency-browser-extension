@@ -41,7 +41,7 @@ async function convert() {
 
   const amount = parseFloat(amountStr);
   if (isNaN(amount) || amountStr.trim() === '') {
-    resultDiv.textContent = 'Digite um valor válido';
+    resultDiv.textContent = '';
     resultDiv.classList.add('error');
     saveBtn.disabled = true;
     lastConversion = null;
