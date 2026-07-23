@@ -11,6 +11,7 @@
 <p align="center">
   <img width="400" height="363" alt="Image" src="https://github.com/user-attachments/assets/11b6cbd1-d350-4fe6-b750-702a18faad12" />
 </p>
+
 ## Features
 
 - **Instant conversion** - type a value and see the result automatically (with a 500ms debounce)
